@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import TextButtonDoes from './TextButtonDoes';
+import SecondButton from './SecondButton';
 class App extends Component {
   render() {
     return (

@@ -9,6 +9,7 @@ class TextButtonDoes extends Component {
       <p style={{color:this.props.textColor}}>{this.props.children}</p>
       <button>Click me</button>
       </div>
-    )};
-
+    );
+}
+};
 export default TextButtonDoes;
