@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-class TextButton extends Component {
+class TextButtonDoes extends Component {
   changeColor = ()=>{
 
   }
@@ -10,5 +10,5 @@ class TextButton extends Component {
       <button>Click me</button>
       </div>
     )};
-  };
-  export default TextButton;
+
+export default TextButtonDoes;

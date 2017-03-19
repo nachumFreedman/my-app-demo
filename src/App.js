@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import TextButton from './TextButton';
+import TextButtonDoes from './TextButtonDoes';
 class App extends Component {
   render() {
     return (
@@ -10,14 +10,14 @@ class App extends Component {
       <img src={logo} className="App-logo" alt="logo" />
       <h2>Welcome to React</h2>
       </div>
-      {[1,2,3].map(i=>(
+      {[1].map(i=>(
         <p className="App-intro">
         {i}. To get started, edit <code>src/App.js</code> and save to reload.
         </p>
       ))}
-      <TextButton textColor="blue">
+      <TextButtonDoes textColor="blue">
       you should
-      </TextButton>
+      </TextButtonDoes>
       </div>
     );
   }
