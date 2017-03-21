@@ -3,6 +3,9 @@ import logo from './logo.svg';
 import './App.css';
 import FirstButton from './FirstButton';
 import SecondButton from './SecondButton';
+function isOdd(button1Click) {
+  return math.abs(number1 % 2) === 1;
+}
 class App extends Component {
 
   constructor(textColor){
@@ -10,18 +13,16 @@ class App extends Component {
     this.state = {
       textColor1: 'red',
       textColor2: 'blue'
+      button1Click: '0'
     };
   }
-  function isOdd(number1) {
-    return math.abs(n % 2) === 1;
-  }
-  function (n) {
+  n = () => {
     this.setState({n: '1' })
   }
-  function (n1) {
+  n1= () => {
     this.setstate({n1: '1'})
   }
-  if (n === isOdd) {
+  if (n = isOdd) {
     changeTextColor1 = () => {
       this.setState({ textColor1: 'red' })
     }
