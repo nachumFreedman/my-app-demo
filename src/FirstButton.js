@@ -4,9 +4,10 @@ class FirstButton extends Component {
 
   }
   render(){
+    console.log(this.props)
     return(
       <div >
-      <p style={{color:this.props.textColor2}}>{this.props.children}</p>
+      <p style={{color:this.props.textColor}}>{this.props.children}</p>
       <button>Click me</button>
       </div>
     );

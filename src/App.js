@@ -19,7 +19,7 @@ class App extends Component {
     this.setstate({ textColor2:'red' })
   }
   render() {
-    var youShould = "You should"
+    var youShould = "You should";
     return (
       <div className="App">
       <div className="App-header">
@@ -27,16 +27,16 @@ class App extends Component {
       <h2>Welcome to React</h2>
       </div>
       {[1].map(i=>(
-        <p className="App-intro">
+        <p className="App-intro" key={i}>
         {i}. To get started, edit <code>src/App.js</code> and save to reload.
         </p>
       ))}
-<div className="spin-button">
-      <FirstButton textColor={this.state.textColor2}
-      onClick={this.changeTextColor1}>
+      <div className="Spin-button">
+      <FirstButton textColor={this.state.textColor1}
+      onClick={this.changeTextColor2}>
       {youShould}
       </FirstButton>
-</div>
+      </div>
       <SecondButton textColor={this.state.textColor2}
       onClick={this.changeTextColor1}>
       {youShould}
