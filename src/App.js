@@ -3,41 +3,29 @@ import logo from './logo.svg';
 import './App.css';
 import FirstButton from './FirstButton';
 import SecondButton from './SecondButton';
-function isOdd(button1Click) {
-  return math.abs(number1 % 2) === 1;
+function isOdd(number1) {
+  return Math.abs(number1 % 2) === 1;
 }
 class App extends Component {
 
-  constructor(textColor){
+  constructor(){
     super();
     this.state = {
       textColor1: 'red',
-      textColor2: 'blue'
-      button1Click: '0'
+      textColor2: 'blue',
+      button1Click: 0
     };
   }
-  n = () => {
-    this.setState({n: '1' })
-  }
-  n1= () => {
-    this.setstate({n1: '1'})
-  }
-  if (n = isOdd) {
-    changeTextColor1 = () => {
-      this.setState({ textColor1: 'red' })
+  changeTextColor1 = () => {
+    console.log(this.state.textColor1)
+    if (this.state.textColor1 === 'red') {
+      this.setState ({textColor1: 'blue'})
+    } else {
+      this.setState ({textColor1: 'red'})
     }
-  } else {
-    changeTextColor1 = () => {
-      this.setState({ textColor1: 'blue' })
-    } else if (n1 === odd) {
-      changeTextColor2 = () => {
-        this.setState({textColor2: 'blue'})
-      } else {
-        changeTextColor2 = () => {
-          this.setState){textColor2: 'red'}
-        }
-      }
-    }
+  }
+  changeTextColor2 = () => {
+    this.setState({ textColor2: 'red' })
   }
   render() {
     var youShould = "You should";

@@ -4,11 +4,11 @@ class FirstButton extends Component {
 
   }
   render(){
-    console.log(this.props)
+    //console.log(this.props)
     return(
       <div >
       <p style={{color:this.props.textColor}}>{this.props.children}</p>
-      <button onClick={this.props.onChangeColor}onClick(n + 1)>Click me</button>
+      <button onClick={this.props.onChangeColor}>Click me</button>
       </div>
     );
 
