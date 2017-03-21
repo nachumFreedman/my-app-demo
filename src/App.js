@@ -3,9 +3,6 @@ import logo from './logo.svg';
 import './App.css';
 import FirstButton from './FirstButton';
 import SecondButton from './SecondButton';
-function isOdd(number1) {
-  return Math.abs(number1 % 2) === 1;
-}
 class App extends Component {
 
   constructor(){
@@ -17,15 +14,18 @@ class App extends Component {
     };
   }
   changeTextColor1 = () => {
-    console.log(this.state.textColor1)
-    if (this.state.textColor1 === 'red') {
-      this.setState ({textColor1: 'blue'})
+    if (this.state.textColor2 === 'red') {
+      this.setState ({textColor2: 'blue'})
     } else {
-      this.setState ({textColor1: 'red'})
+      this.setState ({textColor2: 'red'})
     }
   }
   changeTextColor2 = () => {
-    this.setState({ textColor2: 'red' })
+    if (this.state.textColor1 === 'blue') {
+      this.setState ({ textColor1: 'red' })
+    } else {
+      this.setState ({textColor1: 'blue'})
+    }
   }
   render() {
     var youShould = "You should";
