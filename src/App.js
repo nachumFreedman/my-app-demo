@@ -1,10 +1,25 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import TextButtonDoes from './TextButtonDoes';
+import FirstButton from './FirstButton';
 import SecondButton from './SecondButton';
 class App extends Component {
+
+  constructor(textColor){
+    super();
+    this.state = {
+      textColor1: 'red',
+      textColor2: 'blue'
+    };
+  }
+  changeTextColor1 = () => {
+    this.setstate({ textColor1:'blue' })
+  }
+  changeTextColor2 = () => {
+    this.setstate({ textColor2:'red' })
+  }
   render() {
+    var youShould = "You should"
     return (
       <div className="App">
       <div className="App-header">
@@ -16,9 +31,16 @@ class App extends Component {
         {i}. To get started, edit <code>src/App.js</code> and save to reload.
         </p>
       ))}
-      <TextButtonDoes textColor="blue">
-      you should
-      </TextButtonDoes>
+<div className="spin-button">
+      <FirstButton textColor={this.state.textColor2}
+      onClick={this.changeTextColor1}>
+      {youShould}
+      </FirstButton>
+</div>
+      <SecondButton textColor={this.state.textColor2}
+      onClick={this.changeTextColor1}>
+      {youShould}
+      </SecondButton>
       </div>
     );
   }
