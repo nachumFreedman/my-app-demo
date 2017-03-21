@@ -12,7 +12,7 @@ class App extends Component {
       textColor2: 'blue'
     };
   }
-  function isOdd(n,n1) {
+  function isOdd(number1) {
     return math.abs(n % 2) === 1;
   }
   function (n) {
