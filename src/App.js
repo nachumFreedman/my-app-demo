@@ -12,11 +12,31 @@ class App extends Component {
       textColor2: 'blue'
     };
   }
-  changeTextColor1 = () => {
-    this.setstate({ textColor1:'blue' })
+  function isOdd(n,n1) {
+    return math.abs(n % 2) === 1;
   }
-  changeTextColor2 = () => {
-    this.setstate({ textColor2:'red' })
+  function (n) {
+    this.setState({n: '1' })
+  }
+  function (n1) {
+    this.setstate({n1: '1'})
+  }
+  if (n === isOdd) {
+    changeTextColor1 = () => {
+      this.setState({ textColor1: 'red' })
+    }
+  } else {
+    changeTextColor1 = () => {
+      this.setState({ textColor1: 'blue' })
+    } else if (n1 === odd) {
+      changeTextColor2 = () => {
+        this.setState({textColor2: 'blue'})
+      } else {
+        changeTextColor2 = () => {
+          this.setState){textColor2: 'red'}
+        }
+      }
+    }
   }
   render() {
     var youShould = "You should";
@@ -33,12 +53,12 @@ class App extends Component {
       ))}
       <div className="Spin-button">
       <FirstButton textColor={this.state.textColor1}
-      onClick={this.changeTextColor2}>
+      onChangeColor={this.changeTextColor2}>
       {youShould}
       </FirstButton>
       </div>
       <SecondButton textColor={this.state.textColor2}
-      onClick={this.changeTextColor1}>
+      onChangeColor={this.changeTextColor1}>
       {youShould}
       </SecondButton>
       </div>
