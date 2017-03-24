@@ -6,23 +6,27 @@ import SecondButton from './SecondButton';
 class App extends Component {
 
   constructor(){
+    console.log('blah')
     super();
     this.state = {
+
       textColor1: 'red',
       textColor2: 'red',
     };
   }
-  changeTextColor1 = (buttonIndex) => {
+  changeTextColor = (buttonIndex) => {
     if (buttonIndex === 1) {
-      if (this.state({textColor1: 'red' })
-    ) {
-      this.setState({ textColor1: 'blue' })}
-    } else {
-      this.setState({ textColor1: 'red' })
-    } else if (this.state({textColor2: 'blue' })){
-      this.setState({textColor2: 'red' })
-    } else {
-      this.setState({textColor2: 'blue' })
+      if (this.state.textColor1 === 'red' ){
+        this.setState({ textColor1: 'blue' })
+      } else {
+        this.setState({ textColor1: 'red' })
+      }
+    } else if (buttonIndex === 2) {
+      if (this.state.textColor2 === 'blue' ){
+        this.setState({textColor2: 'red' })
+      } else {
+        this.setState({textColor2: 'blue' })
+      }
     }
   }
   render() {
@@ -39,13 +43,13 @@ class App extends Component {
         </p>
       ))}
       <div className="Spin-button">
-      <FirstButton textColor={this.state.textColor1}
-      onChangeColor={this.changeTextColor1}>
+      <FirstButton textColor={this.state.changeTextColor}
+      onChangeColor={this.changeTextColor}>
       {youShould}
       </FirstButton>
       </div>
-      <SecondButton textColor={this.state.textColor2}
-      onChangeColor={this.changeTextColor1}>
+      <SecondButton textColor={this.state.changeTextColor}
+      onChangeColor={this.changeTextColor}>
       {youShould}
       </SecondButton>
       </div>

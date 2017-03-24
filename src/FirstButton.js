@@ -8,7 +8,7 @@ class FirstButton extends Component {
     return(
       <div >
       <p style={{color:this.props.textColor}}>{this.props.children}</p>
-      <button onClick={this.props.onChangeColor}>Click me</button>
+      <button onClick={() => (this.props.onChangeColor(1))}>Click me</button>
       </div>
     );
 
