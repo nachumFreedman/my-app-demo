@@ -10,8 +10,8 @@ class App extends Component {
     super();
     this.state = {
 
-      textColor1: 'red',
-      textColor2: 'red',
+      textColor1: 'blue',
+      textColor2: 'blue',
     };
   }
   changeTextColor = (buttonIndex) => {
@@ -43,12 +43,12 @@ class App extends Component {
         </p>
       ))}
       <div className="Spin-button">
-      <FirstButton textColor={this.state.changeTextColor}
+      <FirstButton textColor={this.state.textColor1}
       onChangeColor={this.changeTextColor}>
       {youShould}
       </FirstButton>
       </div>
-      <SecondButton textColor={this.state.changeTextColor}
+      <SecondButton textColor={this.state.textColor2}
       onChangeColor={this.changeTextColor}>
       {youShould}
       </SecondButton>
