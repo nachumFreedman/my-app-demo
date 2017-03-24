@@ -23,6 +23,6 @@
   to { transform: rotate(360deg); }
 }
 .Spin-button {
-  animation: App-logo-spin infinite 5s linear;
+  animation: App-logo-spin 5s linear;
   height: 80px;
 }

@@ -9,22 +9,20 @@ class App extends Component {
     super();
     this.state = {
       textColor1: 'red',
-      textColor2: 'blue',
-      button1Click: 0
+      textColor2: 'red',
     };
   }
-  changeTextColor1 = () => {
-    if (this.state.textColor2 === 'red') {
-      this.setState ({textColor2: 'blue'})
+  changeTextColor1 = (buttonIndex) => {
+    if (buttonIndex === 1) {
+      if (this.state({textColor1: 'red' })
+    ) {
+      this.setState({ textColor1: 'blue' })}
     } else {
-      this.setState ({textColor2: 'red'})
-    }
-  }
-  changeTextColor2 = () => {
-    if (this.state.textColor1 === 'blue') {
-      this.setState ({ textColor1: 'red' })
+      this.setState({ textColor1: 'red' })
+    } else if (this.state({textColor2: 'blue' })){
+      this.setState({textColor2: 'red' })
     } else {
-      this.setState ({textColor1: 'blue'})
+      this.setState({textColor2: 'blue' })
     }
   }
   render() {
@@ -42,7 +40,7 @@ class App extends Component {
       ))}
       <div className="Spin-button">
       <FirstButton textColor={this.state.textColor1}
-      onChangeColor={this.changeTextColor2}>
+      onChangeColor={this.changeTextColor1}>
       {youShould}
       </FirstButton>
       </div>
